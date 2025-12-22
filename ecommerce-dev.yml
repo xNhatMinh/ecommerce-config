@@ -57,8 +57,7 @@ resilience4j:
         max-attempts: 3
         wait-duration: 2s
         retry-exceptions:
-          - java.io.IOException
-          - org.springframework.web.client.ResourceAccessException
+          - com.buybuy.project.exceptions.APIException
 
 open:
   api:
