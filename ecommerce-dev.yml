@@ -35,6 +35,31 @@ logging:
     org.hibernate.SQL: DEBUG
     com.buybuy.project: DEBUG
 
+
+# ===== Management / Actuator =====
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, prometheus
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    tags:
+      application: buybuy
+
+# ===== Resilience4j Retry =====
+resilience4j:
+  retry:
+    instances:
+      orderServiceRetry:
+        max-attempts: 3
+        wait-duration: 2s
+        retry-exceptions:
+          - java.io.IOException
+          - org.springframework.web.client.ResourceAccessException
+
 open:
   api:
     title: API-services document
