@@ -34,6 +34,10 @@ logging:
     org.springframework.security: DEBUG
     org.hibernate.SQL: DEBUG
     com.buybuy.project: DEBUG
+    io.github.resilience4j.circuitbreaker: DEBUG
+    io.github.resilience4j.retry: DEBUG
+    io.github.resilience4j.ratelimiter: DEBUG
+    
 
 
 # ===== Management / Actuator =====
