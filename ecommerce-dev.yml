@@ -49,7 +49,7 @@ management:
     tags:
       application: buybuy
 
-# ===== Resilience4j Retry =====
+# ===== Resilience4j Retry and Rate limiting =====
 resilience4j:
   retry:
     instances:
