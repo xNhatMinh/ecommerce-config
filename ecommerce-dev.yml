@@ -70,7 +70,7 @@ resilience4j:
   ratelimiter:
     instances:
       authRateLimiter:
-        limit-for-period: 5
+        limit-for-period: 2
         limit-refresh-period: 10s
         timeout-duration: 0
 
