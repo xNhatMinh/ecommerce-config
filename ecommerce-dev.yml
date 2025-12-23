@@ -69,8 +69,8 @@ resilience4j:
 # ===== Rate limiting =====
   ratelimiter:
     instances:
-      productRateLimiter:
-        limit-for-period: 3
+      authRateLimiter:
+        limit-for-period: 5
         limit-refresh-period: 10s
         timeout-duration: 0
 
